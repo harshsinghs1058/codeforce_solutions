@@ -1,4 +1,5 @@
 //this code is created by HARSH.
+//problem link : https://codeforces.com/problemset/problem/281/A
 #include <iostream>
 #include <bits/stdc++.h>
 #define f(i, n) for (int i = 0; i < (n); i++)
