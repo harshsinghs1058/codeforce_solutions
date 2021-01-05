@@ -1,0 +1,54 @@
+//this code is created by HARSH.
+//problem link : https://codeforces.com/problemset/problem/1367/B
+#include <iostream>
+#include <bits/stdc++.h>
+#define f(i, n) for (int i = 0; i < (n); i++)
+#define fs(i, p, n) for (int i = (p); i < (n); i++)
+#define MAX(x, y) ((x) > (y) ? (x) : (y))
+#define MIX(x, y) ((x) < (y) ? (x) : (y))
+#define p(x) cout << x << endl
+using namespace std;
+typedef vector<int> vi;
+typedef vector<vector<int>> vvi;
+typedef long long int lli;
+typedef long int li;
+const lli N = 10000015;
+
+void solve()
+{
+    int n, possible = 0, swaps = 0;
+    cin >> n;
+    int a[n], even = 0, odd = 0;
+    f(i, n)
+    {
+        int temp;
+        cin >> temp;
+        if (temp % 2 != i % 2)
+        {
+            if (i % 2 == 0)
+            {
+                even++;
+            }
+            else
+            {
+                odd++;
+            }
+        }
+    }
+    cout << (even == odd ? even : -1);
+}
+int main()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    int t, i = 1;
+    cin >> t;
+    while (t--)
+    {
+        solve();
+        cout << endl;
+    }
+
+    return 0;
+}
